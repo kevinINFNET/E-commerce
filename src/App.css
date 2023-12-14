@@ -1,0 +1,178 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+header, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+button {
+  background-color: #173fde;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.DetalhesProduto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DetalhesProduto img,
+.ProdutoRelacionado img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.InformacoesVendedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px; 
+}
+
+.Comentario,
+.Pergunta {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.Comentario .ComentarioInfo,
+.Pergunta .PerguntaInfo {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.Comentario .ComentarioInfo p,
+.Pergunta .PerguntaInfo p {
+  margin: 0;
+}
+
+.ProdutoRelacionado {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.DetalhesProduto .imagens-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DetalhesProduto .imagens-container img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .DetalhesProduto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .InformacoesVendedor {
+    flex-direction: column;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  .search-bar {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ProdutoRelacionado img {
+    max-width: 50%; 
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .DetalhesProduto .imagens-container img {
+    max-width: 200px;
+    margin: 10px;
+  }
+}
